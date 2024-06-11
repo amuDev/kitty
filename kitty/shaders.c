@@ -483,8 +483,8 @@ draw_background_image(OSWindow *w) {
             // Clamping from the bottom right corner and scaling outwards
             left = -1.0f + 2.0f * wfrac;
             right = 1.0f;
-            top = 1.0f;
-            bottom = -1.0f + 2.0f * hfrac;
+            top = 1.0f - 2.0f * hfrac;
+            bottom = -1.0f;
         } break;
     }
     glUniform1f(bgimage_program_layout.uniforms.tiled, tiled);
